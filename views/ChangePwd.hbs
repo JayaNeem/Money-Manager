@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="Login-SignUp-box">
+    <h2>Change Password :</h2>
+    <hr>
+    <form action="/UpdatePwd" method="post">
+      <div class="form-group">
+        <input type="hidden" name="email" value="{{id}}">
+        <label class="pin-label" for="code">Create a 4 digit Picode:</label>
+        <div class="btn-group-vertical ml-4 mt-4" role="group" aria-label="Basic example">
+          <div class="btn-group">
+            <input type="password" class="text-center form-control-lg mb-2" maxlength="4" name="code" id="code" required>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">1</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">2</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">3</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">4</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">5</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">6</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">7</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">8</button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">9</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn py-3"></button>
+            <button type="button" class="btn py-3" onclick="addinput(this.innerHTML)">0</button>
+            <button type="button" class="btn py-3" onclick="removeinput()">&lt;</button>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="javascript/keyboard.js"></script>
+<!-- <script type="text/javascript">
+	$(document).ready(function() {
+		$("form").submit(function() {
+    	alert("Submitted");
+      var pwd = $("#inputPwd").val();
+      var pwd2 = $("#inputPwd2").val();
+      var flag = true;
+      if(pwd != pwd2) {
+        $("#inputPwd").val("");
+        $("#inputPwd2").val("");
+        $("#form-danger-msg").show();
+        flag = false;
+      }
+      return flag;
+  	});
+	});
+</script> -->

@@ -1,0 +1,40 @@
+<div class="container">
+	<br>
+	<p class="month-year" id="month">{{month}} - {{year}}</p>
+	<div class="date-change-group">
+		<button type="submit" class="btn btn-outline-dark" onclick="window.location.href = '/Home?showMonth=previous';"><</button>
+		<button type="submit" class="btn btn-outline-dark" onclick="window.location.href = '/Home?showMonth=next';">></button>
+	</div>
+	<br><br>
+	<div class="progress">
+  		<div class="progress-bar bg-success" role="progressbar" style="width: {{incomePercent}}%" aria-valuenow="{{incomePercent}}" aria-valuemin="0" aria-valuemax="100"></div>
+  		<div class="progress-bar bg-danger" role="progressbar" style="width: {{expensePercent}}%" aria-valuenow="{{expensePercent}}" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+	<br>
+	<div class="income-expences-total">
+		<p>Income</p><p id="it">{{incomeTotal}}</p>
+		<br><br>
+		<p>Expense</p><p id="et">{{expenseTotal}}</p>
+		<br><br>
+		{{#each expenses}}
+		{{#each data}}&nbsp&nbsp<p>{{this.name}}</p>{{/each}}<p class="expenses-amount">{{amount}}&nbsp&nbsp</p>
+		<br>
+		{{/each}}
+		<hr>
+		<p>Total Balance</p><p id="tb"></p>
+	</div>
+	<br>
+	<center>
+		<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = '/AddExpense';">+EXPENSE</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = '/AddIncome';">+INCOME</button>
+	</center>
+	<br>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var it = $('#it').html();
+		var et = $('#et').html();
+		console.log('it' +it +'et' +et);
+		$('#tb').html(it-et);
+	});
+</script>

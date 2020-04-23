@@ -1,0 +1,21 @@
+{
+  "name": "money-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "body-parser": "^1.19.0",
+    "bootstrap-pincode-input": "^2.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.9.7",
+    "nodemailer": "^6.4.6"
+  }
+}

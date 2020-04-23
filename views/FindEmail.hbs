@@ -1,0 +1,20 @@
+<div class="card box-card">
+  <div class="card-body">
+  	<h5 class="card-title">Security question</h5>
+  	<form action="FindMail" method="post">
+    	{{#if msg}}
+    	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{msg}}
+        	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            	<span aria-hidden="true">&times;</span>
+        	</button>
+   	 	</div>
+    	{{/if}}
+    	<div class="form-group">
+    		<label for="exampleInputName1">Enter your nick name</label>
+    		<input type="text" class="form-control" id="exampleInputName1" name="name" placeholder="Enter your name">
+  		</div>
+    	<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+  </div>
+</div>
