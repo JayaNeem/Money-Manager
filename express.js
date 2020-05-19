@@ -4,7 +4,7 @@ const hbs = require('express-handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const session=require('express-session');
+const session = require('express-session');
 
 const User = require('./model/user');
 const Income = require('./model/income');
@@ -16,7 +16,7 @@ const app = express();
 
 //create and start node server
 app.listen(3000, () => {
-	console.log("Server started....");
+	console.log("Server started");
 });
 
 app.engine('hbs', hbs({
